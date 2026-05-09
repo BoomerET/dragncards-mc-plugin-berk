@@ -470,6 +470,9 @@
     },
     "encounterPhase": {
       "English": "Encounter Phase"
+    },
+    "toggleEncounterDeck2": {
+      "English": "Toggle Second Encounter Deck"
     }
   }
 }
