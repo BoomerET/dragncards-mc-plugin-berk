@@ -2,7 +2,7 @@
   "prompts": {
     "importMc4dbDeck": {
       "args": [],
-      "message": "Paste an mc4db deck URL (e.g., https://mc4db.merlindumesnil.net/decklist/view/61)",
+      "message": "Paste an mc4db deck URL (e.g., https://mc4db.merlindumesnil.net/decklist/view/1)",
       "input": {
         "type": "text"
       },
