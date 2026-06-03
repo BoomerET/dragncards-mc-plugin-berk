@@ -181,7 +181,7 @@
         ],
         [
           ["LOG", "LOADING Peni Parker"],
-          ["LOAD_CARDS", "SP//dr (Peni Parker)"]
+          ["LOAD_CARDS", "SP\/\/dr (Peni Parker)"]
         ]
       ],
       ["COND", ["AND", "$LOADED_PLAYER_DECK", ["EQUAL", "$GAME.roundNumber", 0]],
@@ -201,7 +201,10 @@
                 ["NOT", ["DEFINED", "$BUNDLE"]],
                 ["DEFINE", "$BUNDLE", "{{$IDENTITY_CARD.sides.$HERO_SIDE.name}} (Hero) [marvelcdb bundle]"]
               ],
-              ["LOAD_CARDS", "$BUNDLE"]
+              ["COND",
+                ["NOT_EQUAL", "$GAME_DEF.preBuiltDecks.$BUNDLE", null],
+                ["LOAD_CARDS", "$BUNDLE"]
+              ]
             ]
           ],
           ["COND",

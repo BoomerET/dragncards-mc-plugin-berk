@@ -375,6 +375,31 @@
         ]
       ]
     },
+    "BUILD_MC4DB_FACE": {
+      "args": ["$CARD_JSON", "$BASE_URL"],
+      "code": [
+        ["PROCESS_MAP", {
+          "name": "$CARD_JSON.name",
+          "type": "$CARD_JSON.type_name",
+          "imageUrl": ["JOIN_STRING", "$BASE_URL", "$CARD_JSON.imagesrc"],
+          "hitPointsFixed": "$CARD_JSON.health",
+          "hitPointsScaling": null,
+          "handSize": "$CARD_JSON.hand_size",
+          "accelerationFixed": null,
+          "accelerationScaling": null,
+          "acceleration": "$CARD_JSON.boost",
+          "amplify": null,
+          "crisis": null,
+          "hazard": null,
+          "nemesisMinion": "false",
+          "permanent": "false",
+          "startingThreatFixed": "$CARD_JSON.threat",
+          "startingThreatScaling": null,
+          "toughness": "false",
+          "victory": null
+        }]
+      ]
+    },
     "TOGGLE_ENCOUNTER_2_DECK": {
       "args": ["$VISIBILITY"],
       "code": [
